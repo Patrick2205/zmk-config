@@ -1,0 +1,11 @@
+file_format: "1"
+id: shrimp
+name: Shrimp
+type: shield
+url: 
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - shrimp_left
+  - shrimp_right

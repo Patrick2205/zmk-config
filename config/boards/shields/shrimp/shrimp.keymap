@@ -26,8 +26,6 @@
 
 / {
 
-&mt LSHIFT A
-
 	keymap {
 		compatible = "zmk,keymap";
 

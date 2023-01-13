@@ -38,16 +38,16 @@
 
 #define DE_QMARK LS(DE_SS) // ?
 #define DE_BSLH RA(DE_SS) // backslash
-#define DE_LPAR LS(N8) // (  shift8
-#define DE_RPAR LS(N9) // )  shift9?
+#define DE_LPAR LS(NUMBER_8) 
+#define DE_RPAR LS(NUMBER_9) 
 
-#define DE_LBRC RA(N0) // {
-#define DE_RBRC RA(N7) // }
-#define DE_LBKT RA(N8) // [  al5
-#define DE_RBKT RA(N9) // ]  alt6
+#define DE_LBRC RA(NUMBER_0) 
+#define DE_RBRC RA(NUMBER_7) 
+#define DE_LBKT RA(NUMBER_8)  
+#define DE_RBKT RA(NUMBER_9) 
 
-#define DE_LT LT // <
-#define DE_GP LS(LT) // >
+#define DE_LT LT
+#define DE_GP LS(LT) 
 
 
 #define DE_AT RA(Q) // @
@@ -80,7 +80,7 @@
 
 	keymap {
 		compatible = "zmk,keymap";
-		
+
 		base_layer {
 			bindings = <
 				    &kp Q     &kp W          &kp F          &kp P           &kp B              &kp J     &kp L           &kp U          &kp Y          &kp DEL

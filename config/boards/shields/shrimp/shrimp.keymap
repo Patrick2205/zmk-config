@@ -54,10 +54,10 @@
 #define DE_PIPE RA(NUBS) // |
 #define DE_TILDE RA(DE_PLUS) // ~
 
-#define DE_EURO RA(E) // €
-#define DE_EQUAL LS(N0) // =
-#define DE_DLLR LS(N4) // $
-#define DE_PRCNT LS(N5) // %
+#define DE_EURO RA(E) 
+#define DE_EQUAL LS(NUMBER_0) 
+#define DE_DLLR LS(NUMBER_4) 
+#define DE_PRCNT LS(NUMBER_5) 
 
 
 &sk {
@@ -93,7 +93,7 @@
         util_layer {
 			bindings = <
 				     &kp HOME  &kp PG_DN &kp UP     &kp PG_UP &kp END           &kp DE_ADIA    &kp DE_SS   		  &kp DE_LBKT    	   &kp DE_RBKT   		&kp DEL
-	   &kp ENTER 	&kp TAB   &kp LEFT  &kp DOWN   &kp RIGHT &kp ENTER         &kp DE_ODIA     &kp DE_LPAR        &kp DE_RPAR    	   &kp DE_LT         &kp A       &kp BSPC
+	   &kp ENTER 	&kp TAB   &kp LEFT  &kp DOWN   &kp RIGHT &kp ENTER         &kp DE_ODIA     &kp DE_LPAR        &kp DE_RPAR    	   &kp DE_LT         &kp DE_GT       &kp BSPC
 				    &kp ESC   &kp PSCRN &kp DEL    &kp BSPC  &kp BSPC           &kp DE_UDIA    &mt RCTRL DE_LBRC   &mt RGUI DE_RBRC      &mt RALT DE_QMARK   &kp EXCL
 				                                    &sk LSHFT &tog UTIL        &tog SYMNUM &kp SPACE 
 			>;
@@ -103,7 +103,7 @@
 			bindings = <
 				    &none         &kp DE_DQT        &kp DE_BSLH       &kp DE_PIPE     		&none         		   &kp DE_MINUS	&kp N7     &kp N8     &kp N9     &kp DE_FSLH
 		&kp ENTER 	&kp DE_SQT    &kp DE_HASH       &kp DE_FSLH       &kp DE_AT             &kp CARET       	   &kp DE_PLUS  &kp N4     &kp N5     &kp N6     &kp DE_ASTR   &kp BSPC
-				    &kp DE_PRCNT  &mt LALT DE_DLLR  &mt LGUI DE_EURO  &&mt LCTRL DE_TILDE  	&kp AMPS    		   &kp N0    	&kp N1     &kp N2 	   &kp N3   &kp DE_EQUAL
+				    &kp DE_PRCNT  &mt LALT DE_DLLR  &mt LGUI DE_EURO  &&mt LCTRL DE_TILDE  	&kp AMPS    		   &kp N0    	&kp N1     &kp N2 	  &kp N3     &kp DE_EQUAL
 				                                    &sk LSHFT &mo 1       				 &mo 2 &kp SPACE 
 			>;
 		};

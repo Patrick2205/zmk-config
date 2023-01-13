@@ -33,8 +33,6 @@
 #define DE_DQT AT // "
 #define DE_SQT PIPE // '
 
-#define DE_GP TILDE // 
-
 #define DE_Y Z // y
 #define DE_Z Y // z
 
@@ -82,7 +80,7 @@
 
 	keymap {
 		compatible = "zmk,keymap";
-za
+		
 		base_layer {
 			bindings = <
 				    &kp Q     &kp W          &kp F          &kp P           &kp B              &kp J     &kp L           &kp U          &kp Y          &kp DEL

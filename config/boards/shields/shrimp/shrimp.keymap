@@ -47,8 +47,7 @@
 #define DE_RBKT RA(NUMBER_9) 
 
 #define DE_LT LT
-#define DE_GP LS(LT) 
-
+#define DE_GP LS(DE_LT)
 
 #define DE_AT RA(Q) // @
 #define DE_PIPE RA(NUBS) // |

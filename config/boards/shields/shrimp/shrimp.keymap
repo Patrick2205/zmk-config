@@ -92,7 +92,7 @@
         util_layer {
 			bindings = <
 				     &kp HOME  &kp PG_DN &kp UP     &kp PG_UP &kp END           &kp DE_ADIA    &kp DE_SS   		  &kp DE_LBKT    	   &kp DE_RBKT   		&kp DEL
-	   &kp ENTER 	&kp TAB   &kp LEFT  &kp DOWN   &kp RIGHT &kp ENTER         &kp DE_ODIA     &kp DE_LPAR        &kp DE_RPAR    	   &kp DE_LT            &kp DE_GT       &kp BSPC
+	   &kp ENTER 	&kp TAB   &kp LEFT  &kp DOWN   &kp RIGHT &kp ENTER         &kp DE_ODIA     &kp DE_LPAR        &kp DE_RPAR    	   &kp DE_LT            &kp LS(DE_LT)   &kp BSPC
 				    &kp ESC   &kp PSCRN &kp DEL    &kp BSPC  &kp BSPC           &kp DE_UDIA    &mt RCTRL DE_LBRC   &mt RGUI DE_RBRC      &mt RALT DE_QMARK   &kp EXCL
 				                                    &sk LSHFT &tog UTIL        &tog SYMNUM &kp SPACE 
 			>;

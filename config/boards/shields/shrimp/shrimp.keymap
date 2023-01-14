@@ -15,8 +15,7 @@
 #define SYMNUM   2
 #define FUNC   3
 
-#define DE_PLUS RBRC // +
-#define DE_ASTR LS(DE_PLUS) // *
+#define DE_PLUS RBKT // +
 #define DE_HASH NUHS // #
 
 #define DE_ODIA SEMI // ö
@@ -26,7 +25,7 @@
 
 #define DE_MINUS FSLH // - and _
 
-#define DE_CARET NUBS // ^
+
 #define DE_FSLH AMPS // /
 
 #define DE_DQT AT // "
@@ -40,15 +39,16 @@
 #define DE_LPAR LS(NUMBER_8) 
 #define DE_RPAR LS(NUMBER_9) 
 
-#define DE_LBRC RA(NUMBER_0) 
-#define DE_RBRC RA(NUMBER_7) 
+#define DE_LBRC RA(NUMBER_7) 
+#define DE_RBRC RA(NUMBER_0) 
 #define DE_LBKT RA(NUMBER_8)  
 #define DE_RBKT RA(NUMBER_9) 
 
-#define DE_LT GRAVE
+#define DE_CARET GRAVE // ^
+#define DE_LT NUBS
 #define DE_GP LS(DE_LT)
 
-#define DE_AT RA(Q) // @
+#define DE_AT RA(Q) // 
 #define DE_PIPE RA(NUBS) // |
 #define DE_TILDE RA(DE_PLUS) // ~
 
@@ -109,9 +109,9 @@
 
 		function_layer {
 			bindings = <
-				    &bt BT_CLR  &bt BT_PRV        &bt BT_NXT         &none     &kp K_VOL_UP            &none    &kp F1     &kp F2     &kp F3     &kp F4
-			&none 	&none       &out OUT_BLE      &out OUT_BLE       &none     &kp K_MUTE              &none    &kp F5     &kp F6     &kp F7     &kp F8   &kp BSPC
-				    &none       &ext_power EP_ON  &ext_power EP_OFF  &none     &kp K_VOL_DN            &none    &kp F9     &kp F10    &kp F11    &kp F12
+				        &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3     &kp K_VOL_UP            &none    &kp F1     &kp F2     &kp F3     &kp F4
+			&bt BT_CLR 	&none          &out OUT_BLE      &out OUT_BLE       &none     		 &kp K_MUTE              &none    &kp F5     &kp F6     &kp F7     &kp F8   &kp BSPC
+				        &none          &ext_power EP_ON  &ext_power EP_OFF  &none    		 &kp K_VOL_DN            &none    &kp F9     &kp F10    &kp F11    &kp F12
 				                                                    &sk LSHFT &mo 0                              &none &kp SPACE 
 			>;
 		};

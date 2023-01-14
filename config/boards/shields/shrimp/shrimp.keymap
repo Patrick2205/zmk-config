@@ -27,7 +27,6 @@
 #define DE_MINUS FSLH // - and _
 
 #define DE_CARET NUBS // ^
-#define DE_AMPS CARET // &
 #define DE_FSLH AMPS // /
 
 #define DE_DQT AT // "
@@ -46,7 +45,7 @@
 #define DE_LBKT RA(NUMBER_8)  
 #define DE_RBKT RA(NUMBER_9) 
 
-#define DE_LT LT
+#define DE_LT GRAVE
 #define DE_GP LS(DE_LT)
 
 #define DE_AT RA(Q) // @
@@ -57,6 +56,7 @@
 #define DE_EQUAL LS(NUMBER_0) 
 #define DE_DLLR LS(NUMBER_4) 
 #define DE_PRCNT LS(NUMBER_5) 
+#define DE_AMPS LS(NUMBER_6) 
 
 
 &sk {
@@ -82,9 +82,9 @@
 
 		base_layer {
 			bindings = <
-				    &kp Q     &kp W          &kp F          &kp P           &kp B              &kp J     &kp L           &kp U          &kp Y          &kp DEL
+				    &kp Q     &kp W          &kp F          &kp P           &kp B              &kp J     &kp L           &kp U          &kp DE_Y          &kp DEL
 	    &kp ENTER 	&kp A     &kp R          &kp S          &kp T           &kp G              &kp M     &kp N           &kp E          &kp I          &kp O       &kp BSPC 
-				    &kp Z     &mt LALT X     &mt LGUI C     &mt LCTRL D     &kp V              &kp K     &mt RCTRL H     &mt RGUI COMMA      &mt RALT DOT        &kp DE_MINUS
+				    &kp DE_Z     &mt LALT X     &mt LGUI C     &mt LCTRL D     &kp V              &kp K     &mt RCTRL H     &mt RGUI COMMA      &mt RALT DOT        &kp DE_MINUS
 				                                               &sk LSHFT &sl UTIL              &sl SYMNUM &kp SPACE 
 			>;
 		};
@@ -92,7 +92,7 @@
         util_layer {
 			bindings = <
 				     &kp HOME  &kp PG_DN &kp UP     &kp PG_UP &kp END           &kp DE_ADIA    &kp DE_SS   		  &kp DE_LBKT    	   &kp DE_RBKT   		&kp DEL
-	   &kp ENTER 	&kp TAB   &kp LEFT  &kp DOWN   &kp RIGHT &kp ENTER         &kp DE_ODIA     &kp DE_LPAR        &kp DE_RPAR    	   &kp DE_LT            &kp LS(DE_LT)       &kp BSPC
+	   &kp ENTER 	&kp TAB   &kp LEFT  &kp DOWN   &kp RIGHT &kp ENTER         &kp DE_ODIA     &kp DE_LPAR        &kp DE_RPAR    	   &kp DE_LT            &kp DE_GT       &kp BSPC
 				    &kp ESC   &kp PSCRN &kp DEL    &kp BSPC  &kp BSPC           &kp DE_UDIA    &mt RCTRL DE_LBRC   &mt RGUI DE_RBRC      &mt RALT DE_QMARK   &kp EXCL
 				                                    &sk LSHFT &tog UTIL        &tog SYMNUM &kp SPACE 
 			>;
@@ -101,8 +101,8 @@
         symnum_layer {
 			bindings = <
 				    &none         &kp DE_DQT        &kp DE_BSLH       &kp DE_PIPE     		&none         		   &kp DE_MINUS	&kp N7     &kp N8     &kp N9     &kp DE_FSLH
-		&kp ENTER 	&kp DE_SQT    &kp DE_HASH       &kp DE_FSLH       &kp DE_AT             &kp CARET       	   &kp DE_PLUS  &kp N4     &kp N5     &kp N6     &kp DE_ASTR   &kp BSPC
-				    &kp DE_PRCNT  &mt LALT DE_DLLR  &mt LGUI DE_EURO  &mt LCTRL DE_TILDE  	&kp AMPS    		   &kp N0    	&kp N1     &kp N2 	  &kp N3     &kp DE_EQUAL
+		&kp ENTER 	&kp DE_SQT    &kp DE_HASH       &kp DE_FSLH       &kp DE_AT             &kp DE_CARET       	   &kp DE_PLUS  &kp N4     &kp N5     &kp N6     &kp DE_ASTR   &kp BSPC
+				    &kp DE_PRCNT  &mt LALT DE_DLLR  &mt LGUI DE_EURO  &mt LCTRL DE_TILDE  	&kp DE_AMPS    		   &kp N0    	&kp N1     &kp N2 	  &kp N3     &kp DE_EQUAL
 				                                    &sk LSHFT &mo 1       				 &mo 2 &kp SPACE 
 			>;
 		};
@@ -110,7 +110,7 @@
 		function_layer {
 			bindings = <
 				    &bt BT_CLR  &bt BT_PRV        &bt BT_NXT         &none     &kp K_VOL_UP            &none    &kp F1     &kp F2     &kp F3     &kp F4
-			&none 	&none       &out OUT_BLE      &out OUT_BLE       &none     &kp K_MUTE              &none    &kp F4     &kp F5     &kp F6     &kp F7       &kp F8 
+			&none 	&none       &out OUT_BLE      &out OUT_BLE       &none     &kp K_MUTE              &none    &kp F5     &kp F6     &kp F7     &kp F8   &kp BSPC
 				    &none       &ext_power EP_ON  &ext_power EP_OFF  &none     &kp K_VOL_DN            &none    &kp F9     &kp F10    &kp F11    &kp F12
 				                                                    &sk LSHFT &mo 0                              &none &kp SPACE 
 			>;

@@ -16,6 +16,7 @@
 #define FUNC   3
 
 #define DE_PLUS RBKT // +
+#define DE_ASTR LS(DE_PLUS) // *
 #define DE_HASH NUHS // #
 
 #define DE_ODIA SEMI // ö

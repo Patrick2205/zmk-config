@@ -75,6 +75,16 @@
 };
 
 
+behaviors {
+    td_sc: tap_dance_shift_control {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_SHIFT_CTRL";
+        #binding-cells = <0>;
+        tapping-term-ms = <400>;
+        bindings = <&sk LSHFT>, <&kp LCTRL>;
+    };
+};
+
 
 / {
 
@@ -83,27 +93,27 @@
 
 		base_layer {
 			bindings = <
-				    &kp Q          &kp W          &kp F          &kp P        &kp B              &kp J     &kp L     &kp U              &kp DE_Y          &kp DEL
-	    &kp ENTER 	&kp A          &kp R          &kp S          &kp T        &kp G              &kp M     &kp N     &kp E              &kp I             &kp O          &kp BSPC 
-				    &mt LALT DE_Z  &mt LGUI X     &mt LCTRL C    &kp D        &kp V              &kp K     &kp H     &mt RCTRL COMMA    &mt RGUI DOT      &mt RALT DE_MINUS
-				                                               &sk LSHFT &sl UTIL                   &sl SYMNUM &kp SPACE 
+				    &kp Q          &kp W          &kp F          &kp P        &kp B              &kp J     &kp L     &kp U              &kp DE_Y          &kp BSPC
+	    &kp LALT 	&kp A          &kp R          &kp S          &kp T        &kp G              &kp M     &kp N     &kp E              &kp I             &kp O          &kp RGUI 
+				    &mt LCTRL DE_Z &kp X          &kp C          &kp D        &kp V              &kp K     &kp H     &kp COMMA          &kp DOT           &mt RCTRL DE_MINUS
+				                                               &td_sc &sl UTIL                   &sl SYMNUM &kp SPACE 
 			>;
 		};
 
         util_layer {
 			bindings = <
-				    &kp HOME  &kp PG_DN &kp UP     &kp PG_UP &kp END           &kp DE_ADIA    &kp DE_SS     &kp DE_LBKT    	     &kp DE_RBKT   		  &kp DEL
-	   &kp ENTER 	&kp TAB   &kp LEFT  &kp DOWN   &kp RIGHT &kp ENTER         &kp DE_ODIA    &kp DE_LPAR   &kp DE_RPAR    	     &kp DE_LT            &kp LS(DE_LT)   &kp BSPC
-				    &kp ESC   &kp PSCRN &kp DEL    &kp BSPC  &kp BSPC          &kp DE_UDIA    &kp DE_LBRC   &mt RCTRL DE_RBRC    &mt RGUI DE_QMARK    &mt RALT EXCL
-				                                    &sk LSHFT &to UTIL          &to FUNC &kp SPACE 
+				    &kp HOME        &kp PG_DN &kp UP     &kp PG_UP &kp END           &kp DE_ADIA    &kp DE_SS     &kp DE_LBKT    	     &kp DE_RBKT   		  &kp BSPC
+	   &kp LALT 	&kp TAB         &kp LEFT  &kp DOWN   &kp RIGHT &kp ENTER         &kp DE_ODIA    &kp DE_LPAR   &kp DE_RPAR    	     &kp DE_LT            &kp LS(DE_LT)   &kp RGUI 
+				    &mt LCTRL ESC   &kp PSCRN &kp DEL    &kp BSPC  &kp BSPC          &kp DE_UDIA    &kp DE_LBRC   &kp DE_RBRC          &kp DE_QMARK         &mt RCTRL EXCL
+				                                          &sk LSHFT &to UTIL          &to FUNC &kp SPACE 
 			>;
 		};
 
         symnum_layer {
 			bindings = <
-				    &none             &kp DE_DQT        &kp DE_BSLH        &kp DE_PIPE       &none         		      &kp DE_MINUS	&kp N7     &kp N8     &kp N9     &kp DE_FSLH
-		&kp ENTER 	&kp DE_SQT        &kp DE_HASH       &kp DE_FSLH        &kp DE_AT         &kp DE_CARET       	   &kp DE_PLUS  &kp N4     &kp N5     &kp N6     &kp DE_ASTR   &kp BSPC
-				    &mt LALT DE_PRCNT &mt LGUI DE_DLLR  &mt LCTRL DE_EURO  &kp DE_TILDE  	 &kp DE_AMPS    		   &kp N0    	&kp N1     &kp N2 	  &kp N3     &kp DE_EQUAL
+				    &none               &kp DE_DQT        &kp DE_BSLH        &kp DE_PIPE       &none         		      &kp DE_MINUS	&kp N7     &kp N8     &kp N9     &kp DE_FSLH
+		&kp LALT 	&kp DE_SQT          &kp DE_HASH       &kp DE_FSLH        &kp DE_AT         &kp DE_CARET       	      &kp DE_PLUS   &kp N4     &kp N5     &kp N6     &kp DE_ASTR        &kp RGUI
+				    &mt LCTRL DE_PRCNT  &kp DE_DLLR       &kp DE_EURO        &kp DE_TILDE      &kp DE_AMPS    		      &kp N0    	&kp N1     &kp N2 	  &kp N3     &mt RCTRL DE_EQUAL
 				                                                                    &sk LSHFT &to UTIL       				&to FUNC &kp SPACE 
 			>;
 		};
@@ -111,7 +121,7 @@
 		function_layer {
 			bindings = <
 				        &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3     &kp K_VOL_UP            &none    &kp F1     &kp F2     &kp F3     &kp F4
-			&bt BT_CLR 	&none          &out OUT_BLE      &out OUT_BLE       &none     		 &kp K_MUTE              &none    &kp F5     &kp F6     &kp F7     &kp F8   &kp BSPC
+			&bt BT_CLR 	&none          &out OUT_BLE      &out OUT_BLE       &none     		 &kp K_MUTE              &none    &kp F5     &kp F6     &kp F7     &kp F8   &none
 				        &none          &ext_power EP_ON  &ext_power EP_OFF  &none    		 &kp K_VOL_DN            &none    &kp F9     &kp F10    &kp F11    &kp F12
 				                                                                       &sk LSHFT &to 0                &none &kp SPACE 
 			>;
